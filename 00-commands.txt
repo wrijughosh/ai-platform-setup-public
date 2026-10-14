@@ -1,0 +1,11 @@
+# run this - if not found then you need to update it
+az cognitiveservices account project 
+
+az upgrade
+
+az login --use-device-code
+
+# if ERROR: "this is needed when the congnitive service does not have the project subcommand available."
+az extension add --name cognitiveservices --upgrade
+
+az extension add --name ml --upgrade
