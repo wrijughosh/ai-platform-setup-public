@@ -1,13 +1,13 @@
 #these 4 inputs are needed
-labid="66155467"
-#
-foundry_key="YOUR_FOUNDRY_KEY"
-tenantId="YOUR_TENANT_ID"
-subscriptionId="YOUR_SUBSCRIPTION_ID"
-searchKey="YOUR_SEARCH_KEY"
-cosmosKey="YOUR_COSMOS_KEY"
-sqlPassword="YOUR_SQL_PASSWORD"
-#
+labid=""
+# #
+# foundry_key="YOUR_FOUNDRY_KEY"
+# tenantId="YOUR_TENANT_ID"
+# subscriptionId="YOUR_SUBSCRIPTION_ID"
+# searchKey="YOUR_SEARCH_KEY"
+# cosmosKey="YOUR_COSMOS_KEY"
+# sqlPassword="YOUR_SQL_PASSWORD"
+# #
 # Here paste the values STARTS
 foundry_key="YOUR_FOUNDRY_KEY"
 tenantId="YOUR_TENANT_ID"
@@ -46,48 +46,48 @@ txtembdver="2023-05-15"
 def create_env_file(foundry_name, foundryKey, output_path="output.txt", project_name=projName):
 	"""Write the Azure environment variables to a multiline text file."""
 	env_text = f"""
-		AI_FOUNDRY_PROJECT_ENDPOINT="https://{foundry_name}.services.ai.azure.com/api/projects/{project_name}"
-		AI_FOUNDRY_NAME="{foundry_name}"
-		AZURE_PROJECT_NAME="{project_name}"
+AI_FOUNDRY_PROJECT_ENDPOINT="https://{foundry_name}.services.ai.azure.com/api/projects/{project_name}"
+AI_FOUNDRY_NAME="{foundry_name}"
+AZURE_PROJECT_NAME="{project_name}"
 
-		AZURE_OPENAI_ENDPOINT="https://{foundry_name}.openai.azure.com/openai/deployments/{gpt51}/chat/completions?api-version={gpt51ver}"
-		AZURE_OPENAI_BASE_URL_ENDPOINT="https://{openaiName}.openai.azure.com/"
-		AZURE_OPENAI_API_KEY="{foundryKey}"
-		MODEL_DEPLOYMENT_NAME="{gpt51}"
-		MODEL_API_VERSION="{gpt51ver}"
+AZURE_OPENAI_ENDPOINT="https://{foundry_name}.openai.azure.com/openai/deployments/{gpt51}/chat/completions?api-version={gpt51ver}"
+AZURE_OPENAI_BASE_URL_ENDPOINT="https://{openaiName}.openai.azure.com/"
+AZURE_OPENAI_API_KEY="{foundryKey}"
+MODEL_DEPLOYMENT_NAME="{gpt51}"
+MODEL_API_VERSION="{gpt51ver}"
 
-		AZURE_OPENAI_EMBEDDING_ENDPOINT="https://{foundry_name}.openai.azure.com/openai/deployments/{textembedding}/chat/completions?api-version={txtembdver}"
-		AZURE_OPENAI_EMBEDDING_API_KEY="{foundryKey}"
-		EMBEDDING_MODEL_DEPLOYMENT_NAME="{textembedding}"
-		EMBEDDING_MODEL_API_VERSION="{txtembdver}"
+AZURE_OPENAI_EMBEDDING_ENDPOINT="https://{foundry_name}.openai.azure.com/openai/deployments/{textembedding}/chat/completions?api-version={txtembdver}"
+AZURE_OPENAI_EMBEDDING_API_KEY="{foundryKey}"
+EMBEDDING_MODEL_DEPLOYMENT_NAME="{textembedding}"
+EMBEDDING_MODEL_API_VERSION="{txtembdver}"
 
-		AZURE_OPENAI_EMBEDDING_ADA_ENDPOINT="https://{foundry_name}.openai.azure.com/openai/deployments/{textembeddingada}/chat/completions?api-version={txtembdver}"
-		AZURE_OPENAI_EMBEDDING_ADA_API_KEY="{foundryKey}"
-		EMBEDDING_ADA_MODEL_DEPLOYMENT_NAME="{textembeddingada}"
-		EMBEDDING_ADA_MODEL_API_VERSION="{txtembdver}"
+AZURE_OPENAI_EMBEDDING_ADA_ENDPOINT="https://{foundry_name}.openai.azure.com/openai/deployments/{textembeddingada}/chat/completions?api-version={txtembdver}"
+AZURE_OPENAI_EMBEDDING_ADA_API_KEY="{foundryKey}"
+EMBEDDING_ADA_MODEL_DEPLOYMENT_NAME="{textembeddingada}"
+EMBEDDING_ADA_MODEL_API_VERSION="{txtembdver}"
 
-		#
-		GROUNDING_WITH_BING_CONNECTION_NAME="{gwbing}"
+#
+GROUNDING_WITH_BING_CONNECTION_NAME="{gwbing}"
 
-		#
-		TENANT_ID="{tenantId}"
+#
+TENANT_ID="{tenantId}"
 
-		#
-		AZURE_SUBSCRIPTION_ID="{subscriptionId}"
-		AZURE_RESOURCE_GROUP="azureaiworkshoprg"
+#
+AZURE_SUBSCRIPTION_ID="{subscriptionId}"
+AZURE_RESOURCE_GROUP="azureaiworkshoprg"
 
-		#
-		AZURE_AI_SEARCH_ENDPOINT="https://{aisearch}.search.windows.net"
-		AZURE_AI_SEARCH_API_KEY="{searchKey}"
+#
+AZURE_AI_SEARCH_ENDPOINT="https://{aisearch}.search.windows.net"
+AZURE_AI_SEARCH_API_KEY="{searchKey}"
 
-		#
-		COSMOS_ENDPOINT="https://{cosmosdb}.documents.azure.com:443/"
-		COSMOS_KEY="{cosmosKey}"
+#
+COSMOS_ENDPOINT="https://{cosmosdb}.documents.azure.com:443/"
+COSMOS_KEY="{cosmosKey}"
 
-		#
-		SQL_SERVER="{sql}.database.windows.net"
-		SQL_PWD="{sqlPassword}"
-                    """
+#
+SQL_SERVER="{sql}.database.windows.net"
+SQL_PWD="{sqlPassword}"
+			"""
 
 	with open(output_path, "w", encoding="utf-8") as env_file:
 		env_file.write(env_text)
