@@ -2,7 +2,7 @@
 write-host "Please make sure the Lab Id is correct"
 ${labid} = ""
 
-$confirmation = Read-Host "Lab ID is ${labid}. Press Y to continue, or any other key to terminate"
+$confirmation = Read-Host "Lab ID is ${labid}. Press Y to continue, or any other key to terminate."
 if ($confirmation -notmatch '^[Yy]$') {
 	write-host "Terminating script."
 	exit
