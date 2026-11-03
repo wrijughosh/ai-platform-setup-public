@@ -94,6 +94,6 @@ Write-Host "tenantId=`"${tenantId}`""
 Write-Host "subscriptionId=`"${subscriptionId}`""
 Write-Host "searchKey=`"${searchKey}`""
 Write-Host "cosmosKey=`"${cosmosKey}`""
-Write-Host "sqlPassword=`"Your SQL password`""
+# Write-Host "sqlPassword=`"Your SQL password`""
 
 #=======================================================

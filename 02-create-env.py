@@ -1,5 +1,7 @@
 #these 4 inputs are needed
 labid=""
+
+
 # #
 # foundry_key="YOUR_FOUNDRY_KEY"
 # tenantId="YOUR_TENANT_ID"
@@ -14,8 +16,9 @@ tenantId="YOUR_TENANT_ID"
 subscriptionId="YOUR_SUBSCRIPTION_ID"
 searchKey="YOUR_SEARCH_KEY"
 cosmosKey="YOUR_COSMOS_KEY"
-sqlPassword="YOUR_SQL_PASSWORD"
 # Here paste the values ENDS
+
+sqlPassword="Password12345!!"
 
 #below are generated names
 foundryName="ai-foundry-" + labid
@@ -25,7 +28,7 @@ gwbing="gwbing" + labid
 
 aisearch="aisearch-" + labid
 
-cosmosdb="cosmosaivector-" + labid
+gwbing="gwbing" + labid + "ectup5"
 
 sql="sqlaivector-" + labid
 
